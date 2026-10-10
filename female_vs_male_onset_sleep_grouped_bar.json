@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": { "text": "Average Sleep Onset Time" },
+  "data": {
+    "url": "female_vs_male_onset_waking_duration_sleep.csv"
+  }, "transform": [
+    {
+      "fold": ["weeknights_onset",	"weekend_nights_onset"],
+      "as": ["night_type", "time"]
+    }
+  ],
+  "mark": {
+  "type": "bar",
+  "clip": true
+},
+  "encoding": {
+    "x": {
+      "field": "sex",
+      "type": "nominal",
+      "title": "Sex",
+      "axis":{"labelAngle": 0}
+    },
+    
+    "y": { "field": "time", "type": "quantitative", "title": "Time", "scale": {
+       "domain": [10, 12]
+      },
+      "axis": {
+        "values": [10, 10.5, 11, 11.5, 12],
+        "labelExpr": "datum.value === 10 ? '10:00 PM' : datum.value === 10.5 ? '10:30 PM' : datum.value === 11 ? '11:00 PM' : datum.value === 11.5 ? '11:30 PM' :   '12:00 AM'"
+    
+    }},
+    "xOffset": {
+      "field": "night_type"
+    },
+    "color": {
+      "field": "night_type",
+      "type": "nominal",
+      "title": "Night Type",
+      "legend": { "labelExpr": "datum.value == 'weeknights_onset' ? 'Weekend nights' : datum.value == 'weekend_nights_onset' ? 'Weeknights' : 'Other'"}
+      
+    }
+  }
+}
