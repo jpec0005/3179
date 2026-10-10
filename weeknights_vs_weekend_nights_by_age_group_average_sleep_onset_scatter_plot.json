@@ -2,32 +2,42 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": { "text": "Average Sleep Onset Time" },
   "data": {
-    "url": "weeknights_vs_weekend_nights_by_age_group_average_sleep_onset.csv",
-    "format": { "type": "csv" }
-  },
+    "url": "weeknights_vs_weekend_nights_by_age_group_average_sleep_onset.csv"
+  }, "transform": [
+    {
+      "fold": ["weeknights", "weekend_nights"],
+      "as": ["night_type", "time"]
+    }
+  ],
   "mark": {
   "type": "bar",
   "clip": true
 },
   "encoding": {
     "x": {
-      "field": "weeknights",
-      "type": "quantitative",
-      "title": "Average Weeknight Time",
-      "scale": {
-       "domain": [10, 13]
-      },
-      "axis": {
-        "values": [10, 11, 12, 13],
-        "labelExpr": "datum.value === 10 ? '10:00 PM' : datum.value === 11 ? '11:00 PM' : datum.value === 12 ? '12:00 AM' : '1:00 AM'",
-        "labelAngle": -90
-    }
-    },
-    "y": { "field": "age_group", "type": "nominal", "title": "Age Group" },
-    "color": {
       "field": "age_group",
       "type": "nominal",
-      "legend": null
+      "title": "Age group",
+      "axis":{"labelAngle": 0}
+    },
+    
+    "y": { "field": "time", "type": "quantitative", "title": "Time", "scale": {
+       "domain": [10, 14]
+      },
+      "axis": {
+        "values": [10, 11, 12, 13, 14],
+        "labelExpr": "datum.value === 10 ? '10:00 PM' : datum.value === 11 ? '11:00 PM' : datum.value === 12 ? '12:00 AM' : datum.value === 13 ? '1:00 AM' : '2:00 AM'"
+    
+    }},
+    "xOffset": {
+      "field": "night_type"
+    },
+    "color": {
+      "field": "night_type",
+      "type": "nominal",
+      "title": "Night Type",
+      "legend": { "labelExpr": "datum.value == 'weekend_nights' ? 'Weekend nights' : datum.value == 'weeknights' ? 'Weeknights' : 'Other'"}
+      
     }
   }
 }
