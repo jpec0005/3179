@@ -27,7 +27,10 @@
     "color": {
       "field": "age_group",
       "type": "nominal",
-      "legend":null
+      "legend":null,
+      "scale": {
+        "range": ["#d4bc24", "#248dd4", "#9c24d4", "#d42482","#d42424"]
+   }
       
     }
   }
