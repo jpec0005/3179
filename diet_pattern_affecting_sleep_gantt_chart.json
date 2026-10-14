@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": { "text": "Average Onset to Waking Duration of Sleep by Diet Pattern" },
+  "data": {
+    "url": "diet_pattern_affecting_sleep.csv"
+  },
+   "layer": [
+    {
+      "params": [
+        {
+          "name": "hover",
+          "select": {"type": "point", "on": "pointerover", "clear": "pointerout"}
+        }
+      ], 
+  "mark": {
+  "type": "bar",
+  "clip": true
+},
+  "encoding": {
+    "y": {
+      "field": "diet_pattern",
+      "type": "nominal",
+      "title": "Diet Pattern",
+      "axis":{"labelAngle": 0}
+    },
+    
+    "x": { "field": "all_nights_onset", "type": "quantitative", "title": "Hours", "scale": {
+       "domain": [11,20]
+      },
+      "axis": {
+        "values": [11,12,13,14,15,16,17,18,19,20],
+        "labelExpr": "datum.value === 11 ? '11:00 PM' : datum.value === 12 ? '12:00 AM' : datum.value === 13 ? '1:00 AM' : datum.value === 14 ? '2:00 AM' : datum.value === 15 ? '3:00 AM' : datum.value === 16 ? '4:00 AM' :datum.value === 17 ? '5:00 AM' :datum.value === 18 ? '6:00 AM' : datum.value === 19 ? '7:00 AM' : '8:00 AM'",
+        "labelAngle": -90
+    }},
+    "x2": {"field": "all_nights_waking"},
+    "color": {
+      "field": "diet_pattern",
+      "type": "nominal",
+      "legend":null,
+      "scale": {
+        "range": ["#d4bc24", "#248dd4", "#9c24d4", "#d42482","#d42424"]
+   }    
+    },
+    "tooltip": [
+    {"field": "diet_pattern", "type": "nominal", "title": "Diet Pattern"},
+    {"field": "all_nights_onset", "type": "quantitative", "title": "Onset Time"},
+    {"field": "all_nights_waking", "type": "quantitative", "title": "Waking Time"}
+  ]
+
+  }
+    }
+]
+}
