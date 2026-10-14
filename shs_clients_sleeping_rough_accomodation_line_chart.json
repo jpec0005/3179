@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": { "text": "Average Duration of Sleep" },
+  "data": {
+    "url": "accommodation_by_rough_sleeper_nationally.csv"
+  }, 
+  "mark": {
+  "type": "bar"
+  
+},
+  "encoding": {
+    "y": {
+      "field": "number",
+      "type": "quantitative",
+      "title": "Number"
+    },
+    
+    "x": { "timeUnit": "year", "field": "year", "type": "temporal", "title": "Year",
+       "axis":{"labelAngle": -90}},
+    
+    "color": {
+      "field": "type_of_accommodation",
+      "type": "nominal",
+      "sort": ["Long-term housing", "Medium-term/transitional housing", "Short-term or emergency accommodation","Any accommodation provision"]
+
+      },
+      "order": {
+      "aggregate":"sum",
+      "field": "number",
+      "type": "quantitative",
+      "sort": "descending"
+    } 
+    }
+  }
