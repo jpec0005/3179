@@ -1,43 +1,79 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": { "text": "Average Waking Time by Gender" },
+  "title": {
+    "text": "Average Waking Time by Gender",
+    "anchor": "middle"
+  },
   "data": {
     "url": "female_vs_male_onset_waking_duration_sleep.csv"
-  }, "transform": [
+  },
+  "transform": [
     {
-      "fold": ["weeknights_waking",	"weekend_nights_waking"],
-      "as": ["night_type", "time"]
+      "fold": [
+        "weeknights_waking",
+        "weekend_nights_waking"
+      ],
+      "as": [
+        "night_type",
+        "time"
+      ]
     }
   ],
-  "mark": {
-  "type": "bar",
-  "clip": true
-},
-  "encoding": {
-    "x": {
-      "field": "sex",
-      "type": "nominal",
-      "title": "Gender",
-      "axis":{"labelAngle": 0}
+  "facet": {
+    "field": "sex",
+    "type": "nominal",
+    "title": "Gender",
+    "header": {
+      "titleOrient": "bottom",
+      "labelOrient": "bottom"
+    }
+  },
+  "spec": {
+    "width": 120,
+    "height": 220,
+    "mark": {
+      "type": "bar",
+      "clip": true
     },
-    
-    "y": { "field": "time", "type": "quantitative", "title": "Time", "scale": {
-       "domain": [6, 8]
+    "encoding": {
+      "x": {
+        "field": "night_type",
+        "type": "nominal",
+        "title": "",
+        "axis": {
+          "labels": false,
+          "ticks": false
+        }
       },
-      "axis": {
-        "values": [6, 6.5, 7,7.5, 8],
-        "labelExpr": "datum.value === 6 ? '6:00 AM' : datum.value === 6.5 ? '6:30 AM' : datum.value === 7 ? '7:00 AM' :  datum.value === 7.5 ? '7:30 AM' :'8:00 AM'"
-    
-    }},
-    "xOffset": {
-      "field": "night_type"
-    },
-    "color": {
-      "field": "night_type",
-      "type": "nominal",
-      "title": "Night Type",
-      "legend": { "labelExpr": "datum.value == 'weeknights_waking' ? 'Weekend nights' : datum.value == 'weekend_nights_waking' ? 'Weeknights' : 'Other'"}
-      
+      "y": {
+        "field": "time",
+        "type": "quantitative",
+        "title": "Time",
+        "scale": {
+          "domain": [
+            6,
+            8
+          ]
+        },
+        "axis": {
+          "values": [
+            6,
+            6.5,
+            7,
+            7.5,
+            8
+          ],
+          "labelExpr": "datum.value === 6 ? '6:00 AM' : datum.value === 6.5 ? '6:30 AM' : datum.value === 7 ? '7:00 AM' : datum.value === 7.5 ? '7:30 AM' : '8:00 AM'"
+        }
+      },
+      "color": {
+        "field": "night_type",
+        "type": "nominal",
+        "title": "Night Type",
+        "legend": {
+          "labelExpr": "datum.value == 'weeknights_waking' ? 'Weeknights' : 'Weekend nights'"
+        }
+      }
     }
   }
 }
