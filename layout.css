@@ -1,12 +1,31 @@
 h1{
     text-align: center;
 }
-
+h2{
+    text-align: center;
+}
 .title-description{
     text-align: center;
+    margin-left: 280px;
+    margin-right:280px;
 
 }
 
 .pure-u-1-3{ 
+    display: flex;
+    justify-content: center; 
 
+
+}
+
+html, body{
+    background-color: rgb(235, 220, 171);
+}
+
+.pure-g{
+    margin-left: 50px; /* 50 for all margins */
+    margin-right:50px;
+}
+.graph_descripter{
+     margin-right:50px;
 }

@@ -4,6 +4,7 @@
     "text": "Average Waking Time by Gender",
     "anchor": "middle"
   },
+  
   "data": {
     "url": "female_vs_male_onset_waking_duration_sleep.csv"
   },
@@ -21,7 +22,7 @@
   ],
   "facet": {
     "field": "sex",
-    "type": "nominal",
+    "type": "nominal", 
     "title": "Gender",
     "header": {
       "titleOrient": "bottom",
@@ -30,7 +31,7 @@
   },
   "spec": {
     "width": 120,
-    "height": 220,
+    "height": 250,
     "mark": {
       "type": "bar",
       "clip": true

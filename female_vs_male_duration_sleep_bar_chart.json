@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": { "text": "Average Duration of Sleep" },
+  "width":300,
+  "height":250,
   
   "data": {
     "url": "female_vs_male_onset_waking_duration_sleep.csv"
