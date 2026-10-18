@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": { "text": "Average Onset to Waking Duration of Sleep by Smoking Status" },
-  "width": 200,
-  "height": 100,
+  "width":202,
+  "height":250,
   "data": {
     "url": "smoker_status_affecting_sleep.csv"
   },

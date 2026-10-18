@@ -3,6 +3,8 @@
   "title": {
     "text": "Average Duration of Sleep"
   },
+   "width":300,
+  "height":250,
   "data": {
     "url": "accommodation_by_rough_sleeper_nationally.csv"
   },

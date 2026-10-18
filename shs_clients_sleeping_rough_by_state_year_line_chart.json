@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": { "text": "Average Duration of Sleep" },
+  "width":300,
+  "height":250,
   "data": {
     "url": "shs_clients_sleeping_rough_by_state_year.csv"
   }, 

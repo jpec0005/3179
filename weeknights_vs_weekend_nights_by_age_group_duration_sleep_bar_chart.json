@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": { "text": "Average Duration of Sleep" },
+  "width":358,
+  "height":250,
   "data": {
     "url": "weeknights_vs_weekend_nights_by_age_group_average_sleep_onset.csv"
   }, 
