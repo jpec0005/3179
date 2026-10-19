@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": { "text": "Average Onset Time" },
+  "title": { "text": "Average Onset Time between Night Type by Age Group" },
   "width":281,
   "height":250,
   "data": {
@@ -13,7 +13,7 @@
   ],
   "mark": {
   "type": "point",
-  "clip": true
+  "tooltip":true
 },
   "encoding": {
     "y": {
@@ -28,8 +28,8 @@
       },
       "axis": {
         "values": [6, 6.5, 7, 7.5, 8, 8.5, 9],
-        "labelExpr": "datum.value === 6 ? '6:00 AM' : datum.value === 6.5 ? '6:30 AM' : datum.value === 7 ? '7:00 AM' : datum.value === 7.5 ? '7:30 AM' : datum.value === 8 ? '8:00 AM' : datum.value === 8.5 ? '8:30 AM' : '9:00 AM'"
-    
+        "labelExpr": "datum.value === 6 ? '6:00 AM' : datum.value === 6.5 ? '6:30 AM' : datum.value === 7 ? '7:00 AM' : datum.value === 7.5 ? '7:30 AM' : datum.value === 8 ? '8:00 AM' : datum.value === 8.5 ? '8:30 AM' : '9:00 AM'",
+        "labelAngle": -90
     }},
     "xOffset": {
       "field": "night_type"
@@ -40,6 +40,10 @@
       "title": "Night Type",
       "legend": { "labelExpr": "datum.value == 'weekend_nights_waking' ? 'Weekend nights' : datum.value == 'weeknights_waking' ? 'Weeknights' : 'Other'"}
       
-    }
+    },
+    "tooltip": [
+    {"field": "time", "type": "nominal", "title": "Time"},
+    {"field": "age_group", "type": "nominal", "title": "Age Group"}
+  ]
   }
 }

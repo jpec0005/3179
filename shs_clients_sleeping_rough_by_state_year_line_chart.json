@@ -1,27 +1,40 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": { "text": "Average Duration of Sleep" },
-  "width":300,
-  "height":250,
+  "title": {
+    "text": "Number of Rough Sleepers per Year by State/Territory"
+  },
+  "width": 300,
+  "height": 250,
   "data": {
     "url": "shs_clients_sleeping_rough_by_state_year.csv"
-  }, 
+  },
   "mark": {
-  "type": "line"
-  
-},
+    "type": "line",
+    "point": {
+      "filled": false,
+      "fill": "white"
+    },
+    "tooltip": true
+  },
   "encoding": {
     "y": {
       "field": "number",
       "type": "quantitative",
       "title": "Number"
     },
-    
-    "x": { "timeUnit": "year", "field": "year", "type": "temporal", "title": "Year",
-       "axis":{"labelAngle": -90}},
-    
+    "x": {
+      "timeUnit": "year",
+      "field": "year",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {
+        "labelAngle": -90
+      }
+    },
     "color": {
       "field": "state_territory",
-      "type": "nominal"}
-      }
+      "type": "nominal",
+      "title": "State/Territory"
+    }
   }
+}

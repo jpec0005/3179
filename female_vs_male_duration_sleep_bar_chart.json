@@ -1,37 +1,57 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": { "text": "Average Duration of Sleep" },
-  "width":350,
-  "height":265,
-  
+  "title": {
+    "text": "Average Duration of Sleep by Sex"
+  },
+  "width": 350,
+  "height": 265,
   "data": {
     "url": "female_vs_male_onset_waking_duration_sleep.csv"
-  }, 
+  },
   "mark": {
-  "type": "bar",
-  "clip": true
-},
+    "type": "bar",
+    "clip": true,
+    "tooltip": true
+  },
   "encoding": {
     "y": {
       "field": "sex",
       "type": "nominal",
-      "title": "Gender",
-      "axis":{"labelAngle": 0}
+      "title": "Sex",
+      "axis": {
+        "labelAngle": 0
+      }
     },
-    
-    "x": { "field": "all_nights_duration", "type": "quantitative", "title": "Hours", "scale": {
-       "domain": [7,8]
+    "x": {
+      "field": "all_nights_duration",
+      "type": "quantitative",
+      "title": "Hours",
+      "scale": {
+        "domain": [
+          7,
+          8
+        ]
       },
       "axis": {
-        "values": [7,7.5,8],
+        "values": [
+          7,
+          7.5,
+          8
+        ],
         "labelExpr": "datum.value === 7 ? '7' : datum.value === 7.5 ? '7.5' : '8'"
-    
-    }},
+      }
+    },
     "color": {
       "field": "sex",
       "type": "nominal",
-      "legend":null
-      
-    }
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "all_nights_duration",
+        "type": "quantitative",
+        "title": "Hours"
+      }
+    ]
   }
 }

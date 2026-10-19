@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": { "text": "Average Duration of Sleep" },
+  "title": { "text": "Average Duration of Sleep by Age Group" },
   "width":358,
   "height":250,
   "data": {
@@ -8,7 +8,8 @@
   }, 
   "mark": {
   "type": "bar",
-  "clip": true
+  "clip": true,
+  "tooltip":true
 },
   "encoding": {
     "y": {
@@ -34,6 +35,13 @@
         "range": ["#d4bc24", "#248dd4", "#9c24d4", "#d42482","#d42424"]
    }
       
-    }
+    },
+    "tooltip": [
+      {
+        "field": "all_nights_duration",
+        "type": "nominal",
+        "title": "Hours"
+      }
+    ]
   }
 }
