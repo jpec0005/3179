@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": { "text": "Average Onset Time between Night Type by Age Group" },
-  "width":281,
-  "height":250,
+  "width":200,
+  "height":255,
   "data": {
     "url": "weeknights_vs_weekend_nights_by_age_group_average_sleep_onset.csv"
   }, "transform": [
@@ -38,7 +38,7 @@
       "field": "night_type",
       "type": "nominal",
       "title": "Night Type",
-      "legend": { "labelExpr": "datum.value == 'weekend_nights_waking' ? 'Weekend nights' : datum.value == 'weeknights_waking' ? 'Weeknights' : 'Other'"}
+      "legend": { "labelExpr": "datum.value == 'weekend_nights_waking' ? 'Weekend nights' : datum.value == 'weeknights_waking' ? 'Weeknights' : 'Other'", "orient": "bottom"}
       
     },
     "tooltip": [

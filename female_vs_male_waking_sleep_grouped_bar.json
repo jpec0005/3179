@@ -30,7 +30,7 @@
     }
   },
   "spec": {
-    "width": 75,
+    "width": 132,
     "height": 250,
     "mark": {
       "type": "bar",

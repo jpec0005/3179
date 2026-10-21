@@ -3,7 +3,7 @@
   "title": {
     "text": "Average Duration of Sleep by Sex"
   },
-  "width": 250,
+  "width": 272,
   "height": 310,
   "data": {
     "url": "female_vs_male_onset_waking_duration_sleep.csv"
