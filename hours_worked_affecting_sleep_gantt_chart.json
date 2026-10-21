@@ -3,7 +3,7 @@
   "title": {
     "text": "Average Duration of Sleep by Hours Worked"
   },
-  "width": 100,
+  "width": 202,
   "height": 250,
   "data": {
     "url": "hours_worked_affecting_sleep.csv"

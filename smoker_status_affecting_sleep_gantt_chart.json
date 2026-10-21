@@ -3,8 +3,8 @@
   "title": {
     "text": "Average Duration of Sleep by Smoking Status"
   },
-  "width": 100,
-  "height": 200,
+  "width": 220,
+  "height": 250,
   "data": {
     "url": "smoker_status_affecting_sleep.csv"
   },
@@ -17,7 +17,8 @@
       "type": "nominal",
       "title": "Smoking Status",
       "axis": {
-        "labelAngle": 0
+        "labelAngle": 0,
+         "labelExpr": "datum.label == 'Current smoker' ? 'Smoker' : 'Non-Smoker'"
       }
     },
     "x": {

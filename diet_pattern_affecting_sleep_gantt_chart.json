@@ -3,7 +3,7 @@
   "title": {
     "text": "Average Duration of Sleep by Diet Pattern"
   },
-  "width": 100,
+  "width": 270,
   "height": 250,
   "data": {
     "url": "diet_pattern_affecting_sleep.csv"
@@ -17,7 +17,8 @@
       "type": "nominal",
       "title": "Diet Pattern",
       "axis": {
-        "labelAngle": 0
+        "labelAngle": 0,
+         "labelExpr": "datum.label == 'Does not follow diet or eating pattern' ? 'No Diet' : 'Follows Diet'"
       }
     },
     "x": {

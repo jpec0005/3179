@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Rough Sleepers per Year by Accommodation Type"
+    "text": "Accommodation Type for Rough Sleepers"
   },
-  "width": 300,
+  "width": 275,
   "height": 250,
   "data": {
     "url": "accommodation_by_rough_sleeper_nationally.csv"
@@ -36,7 +36,8 @@
         "Short-term or emergency",
         "Any accommodation provision"
       ],
-      "title": "Type of Accommodation"
+      "title": "Type of Accommodation",
+      "legend":{"orient": "bottom", "columns":1}
     },
     "order": {
       "aggregate": "sum",

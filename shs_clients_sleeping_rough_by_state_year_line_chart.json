@@ -1,10 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Number of Rough Sleepers per Year by State/Territory"
+    "text": "Rough Sleepers per Year by State/Territory"
   },
-  "width": 300,
-  "height": 250,
+  "width": 283,
+  "height": 271,
   "data": {
     "url": "shs_clients_sleeping_rough_by_state_year.csv"
   },
@@ -34,7 +34,9 @@
     "color": {
       "field": "state_territory",
       "type": "nominal",
-      "title": "State/Territory"
+      "title": "State/Territory",
+      "legend":{"orient":"bottom", "columns": 4}
+      
     }
   }
 }
