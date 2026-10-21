@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Average Onset to Waking Duration of Sleep by Diet Pattern"
+    "text": "Average Duration of Sleep by Diet Pattern"
   },
-  "width": 130,
+  "width": 100,
   "height": 250,
   "data": {
     "url": "diet_pattern_affecting_sleep.csv"
