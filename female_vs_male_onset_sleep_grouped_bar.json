@@ -29,7 +29,7 @@
     }
   },
   "spec": {
-    "width": 120,
+    "width": 75,
     "height": 250,
     "mark": {
       "type": "bar",
@@ -72,7 +72,8 @@
         "type": "nominal",
         "title": "Night Type",
         "legend": {
-          "labelExpr": "datum.value == 'weeknights_onset' ? 'Weeknights' : 'Weekend nights'"
+          "labelExpr": "datum.value == 'weeknights_onset' ? 'Weeknights' : 'Weekend nights'",
+          "orient": "bottom"
         }
       },
       "tooltip": [
