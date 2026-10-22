@@ -9,6 +9,7 @@ var vg_8 = "diet_pattern_affecting_sleep_gantt_chart.json";
 var vg_9 = "smoker_status_affecting_sleep_gantt_chart.json";
 var vg_10 = "shs_clients_sleeping_rough_by_state_year_line_chart.json";
 var vg_11 = "shs_clients_sleeping_rough_accomodation_line_chart.json";
+var vg_12 = "vulnerability_homeless_bar_chart.json";
 
 vegaEmbed("#bar_chart_1", vg_1).then(function(result) {
 }).catch(console.error);
@@ -41,4 +42,7 @@ vegaEmbed("#bar_chart_10", vg_10).then(function(result) {
 }).catch(console.error);
 
 vegaEmbed("#bar_chart_11", vg_11).then(function(result) {
+}).catch(console.error);
+
+vegaEmbed("#bar_chart_12", vg_12).then(function(result) {
 }).catch(console.error);
