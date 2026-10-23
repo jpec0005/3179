@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": { "text": "Average Onset Time between Night Type by Age Group" },
+  "title": { "text": "Average Waking Time between Night Type by Age Group" },
   "width":200,
   "height":255,
   "data": {

@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Average Waking Time between Night Type by Age Group"
+    "text": "Average Onset Time between Night Type by Age Group"
   },
   "width": 200,
   "height": 250,
@@ -40,18 +40,21 @@
       "scale": {
         "domain": [
           10,
-          14
+          13.5
         ]
       },
       "axis": {
         "values": [
           10,
+          10.5,
           11,
+          11.5,
           12,
+          12.5,
           13,
-          14
+          13.5
         ],
-        "labelExpr": "datum.value === 10 ? '10:00 PM' : datum.value === 11 ? '11:00 PM' : datum.value === 12 ? '12:00 AM' : datum.value === 13 ? '1:00 AM' : '2:00 AM'",
+        "labelExpr": "datum.value === 10 ? '10:00 PM' : datum.value === 10.5 ? '10:30 PM' : datum.value === 11 ? '11:00 PM': datum.value === 11.5 ? '11:30 PM' : datum.value === 12 ? '12:00 AM' : datum.value === 12.5 ? '12:30 AM': datum.value === 13 ? '1:00 AM' : '1:30 AM'",
         "labelAngle": -90
       }
     },
