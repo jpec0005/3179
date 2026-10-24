@@ -10,22 +10,27 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-    <title>My first HTML Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Manrope:wght@200..800&family=Russo+One&display=swap" rel="stylesheet">
+
+    <title>Sleep and Wellbeing</title>
 </head>
 
 <body>
     <br>
     <br>
     <br>
-    <div class="pure-g"> <!--row-->
-        <div class="pure-u-1 bg-white"> <!--column-->
-            <h1>How is sleep affected by a persons lifestyle and what implications does it have for their wellbeing</h1>
-            <p class="title-description">This visualisation aims to highlight what age groups and gender sleep patterns
-                are through weekdays,
+    <div class="pure-g">
+        <div class="pure-u-1 bg-white">
+            <h1>How is sleep affected by a persons lifestyle and what implications does quality of sleep have for their
+                wellbeing</h1>
+            <p class="title-description">This visualisation aims to highlight sleep patterns by sex and age group
+                through weekdays,
                 weekends and their average duration.
-                Secondly it sheds light on lifestyle choices such as employment,
-                diet and smoking status to see if poor wellbeing choices affects sleep.
-                Lastly how accommodation risk of
+                Secondly, it sheds light on lifestyle choices such as amount of hours worked,
+                diet and smoking status to see if they contribute to change in sleep quality.
+                Lastly, how accommodation, vulnerabilities of people such as mental health and the risk of
                 homelessness affects how well people sleep.</p>
 
         </div>
@@ -37,10 +42,11 @@
         <div class="pure-u-1 bg-white">
             <h2>Average Sleep Hours and Duration</h2>
             <p class="subheadings-description">
-                This section goes over the onset and waking time of sexes and age groups, as well as sleep duration.
+                This section goes over the average onset and waking times for people classified by age group and sex, as
+                well as sleep duration.
             </p>
             <p class="subheadings-description">* Please note that hovering over bars/dots, that the minutes are in
-                decimal hours besides graphs that display time in hours *</p>
+                decimal hours besides axes that are labelled "Hours". *</p>
         </div>
     </div>
     <br>
@@ -59,8 +65,10 @@
     <br>
     <div class="pure-g">
         <div class="pure-u-1 bg-white">
-            <p class="subheadings-description">For both sexes weekend nights have a later onset time and people wake up
-                later on weekends. As well as females having a higher average duration.</p>
+            <p class="subheadings-description">For both sexes, on weekend nights people have a later onset time and
+                people wake up
+                later on weekend mornings. For sleep duration females tend to on average have a longer duration of
+                sleep.</p>
         </div>
     </div>
     <br>
@@ -85,10 +93,12 @@
     <br>
     <div class="pure-g">
         <div class="pure-u-1 bg-white">
-            <p class="subheadings-description">For age groups onset time for 18-24 age group for both weeknight and
-                weekend night is more varied between 12am and 1am. compared to 55-64 where onset time sits around 11pm.
-                Duration for groups 25-34, 35-44 and 45-54 are similar. This may be influenced by a couple of lifestyle
-                reasons in the next section.</p>
+            <p class="subheadings-description">The onset time for the 18-24 age group for both weeknights and
+                weekend nights is more varied between 12am and 1am, compared to the 55-64 age group where the onset time
+                sits around 11pm.
+                Duration for age groups 25-34, 35-44 and 45-54 are similar, this may be influenced by a couple of
+                lifestyle
+                choices covered in the next section.</p>
         </div>
     </div>
     <br>
@@ -98,7 +108,7 @@
             <h2>Lifestyle choices</h2>
             <p class="subheadings-description">
                 This section goes over the duration of sleep for hours worked, diet pattern and smoking status, it shows
-                you the starting point of when people fall asleep up until they wake up.
+                the starting point of when people fall asleep up until they wake up.
             </p>
             <p class="subheadings-description">* Please note that hovering over bars, that the minutes are in
                 decimal hours *</p>
@@ -124,10 +134,11 @@
     <br>
     <div class="pure-g">
         <div class="pure-u-1 bg-white">
-            <p class="subheadings-description">For age groups onset time for 18-24 age group for both weeknight and
-                weekend night is more varied between 12am and 1am. compared to 55-64 where onset time sits around 11pm.
-                Duration for groups 25-34, 35-44 and 45-54 are similar. This may be influenced by a couple of lifestyle
-                reasons in the next section.</p>
+            <p class="subheadings-description">People who work more hours go to sleep earlier and wake up earlier where
+                as people not working sleep later and wake up later with a duration roughly around 7 hours and 30
+                minutes for each group. For diet and smoking there is no substantial difference for duration of sleep.
+                Hours worked has the most effect out of the 3 of determining how well someone sleeps, suggesting that
+                the more hours worked the more impact it has on your sleep.</p>
         </div>
     </div>
     <br>
@@ -136,9 +147,11 @@
         <div class="pure-u-1 bg-white">
             <h2>SHS Clients and why they sleep rough</h2>
             <p class="subheadings-description">
-                This section goes over the Specialist Homelessness Services (SHS). A government-funded organisation in Australia that provide support, accommodation,
-                and resources to people experiencing homelessness or at risk of losing their housing. The reason this is a focus is because their clients
-                are deemed as "Rough Sleepers". They seek help as their accommodation varies and their vulnerabilities that may contribute to
+                This section goes over the Specialist Homelessness Services (SHS). A government-funded organisation in
+                Australia that provides support for people experiencing homelessness or at risk of losing their housing.
+                This is a focus because their clients
+                are deemed as "rough sleepers". They seek help as their accommodation varies and their vulnerabilities
+                that may contribute to
                 poor sleep and over all wellbeing.
             </p>
         </div>
@@ -159,6 +172,19 @@
         </div>
     </div>
     <br>
+    <div class="pure-g">
+        <div class="pure-u-1 bg-white">
+            <p class="subheadings-description">
+                Victoria, New South Wales and Queensland have a higher population compared to other states so naturally
+                there will be a large amount of rough sleepers. Trends are stable with a noticable peak for Victoria in
+                2019. The most prevalant vulnerability these rough sleepers have are mental health which may
+                contribute to poor sleep but may arise due to their situation with being homeless or at risk of
+                homelessness. Accommodation is usually short term with a majority of people not being able to be
+                comfortable for too long at their place of living, this may result in not feeling comfortable enough to
+                get adequate sleep.
+            </p>
+        </div>
+    </div>
     <br>
     <br>
 
