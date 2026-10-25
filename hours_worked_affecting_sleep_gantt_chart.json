@@ -25,7 +25,7 @@
     "x": {
       "field": "all_nights_onset",
       "type": "quantitative",
-      "title": "Hours",
+      "title": "Time",
       "scale": {
         "domain": [
           11,
