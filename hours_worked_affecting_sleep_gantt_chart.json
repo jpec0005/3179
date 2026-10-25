@@ -70,7 +70,7 @@
       {
         "field": "hours_usually_worked",
         "type": "nominal",
-        "title": "Smoking Status"
+        "title": "Hours Usually Worked"
       },
       {
         "field": "all_nights_onset",
